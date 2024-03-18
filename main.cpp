@@ -13,11 +13,11 @@ public:
     }
 
     bool operator==(const Fraction &other) const {
-        return this->numerator_ == other.numerator_ && this->denominator_ == other.denominator_;
+        return this->numerator_ * other.denominator_ == this->denominator_ * other.numerator_;
     }
 
     bool operator!=(const Fraction &other) const {
-        return this->numerator_ != other.numerator_ || this->denominator_ != other.denominator_;
+        return this->numerator_ * other.denominator_ != this->denominator_ * other.numerator_;
     }
 
     bool operator<(const Fraction &other) const {
